@@ -1,3 +1,4 @@
+@Library('nodejs_sharedlibrary@master') _
 pipeline {
   agent any
     tools {nodejs "NodeJS"}
@@ -8,14 +9,14 @@ pipeline {
      
     stage('Build') {
       steps {
-        sh 'npm install'
+        build()
       }
     }  
     
             
     stage('Test') {
       steps {
-        sh 'npm test'
+        test()
       }
     }
   }
