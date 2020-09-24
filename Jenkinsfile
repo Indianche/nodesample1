@@ -17,14 +17,14 @@ pipeline {
      
     stage('Build') {
       steps {
-        build()
+        nodejsBuild()
       }
     }  
     
             
     stage('Test') {
       steps {
-        test()
+        nodejsTest()
       }
     }
   }
