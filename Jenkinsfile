@@ -6,6 +6,14 @@ pipeline {
     
   stages {
         
+    stage('Git Checkout') {
+            steps{
+               gitCheckout(
+                   branch: "master",
+                    url: "https://github.com/Indianche/nodesample1.git"
+                )
+            }
+        }
      
     stage('Build') {
       steps {
